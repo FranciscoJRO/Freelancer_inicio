@@ -72,6 +72,19 @@ h3 {
     margin: 3rem 0; /* Establece un margen superior e inferior de 3rem y un margen izquierdo y derecho automático para centrar el logotipo. */
 }
 
+/** footer **/
+.footer{
+    background-color: var(--primario_oscuro); /* Establece el color de fondo del pie de página utilizando la variable "--primario_oscuro". */
+    padding: 2.5rem 0; /* Establece un relleno superior e inferior de 3rem y un relleno izquierdo y derecho automático para centrar el contenido. */
+    margin-top: 2rem; /* Establece un margen superior de 2rem para separar el pie de página del contenido anterior. */
+}
+
+.footer__texto{
+    text-align: center;/* Centra el texto del pie de página. */
+    font-family: var(--fuente_principal); /* Utiliza la variable "--fuente_principal" como fuente para el texto del pie de página. */
+    font-size: 2.2rem;/* Establece el tamaño de fuente para el texto del pie de página en 2.2rem. */
+}
+
 /** Navegación **/
 
 .navegacion{
