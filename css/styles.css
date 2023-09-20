@@ -184,9 +184,7 @@ h3 {
     /* Establece el ancho de la imagen del producto al 100% del contenedor padre para que se ajuste automáticamente al tamaño de la pantalla. */
 }
 
-.producto__informacion {
-
-}
+.producto__informacion {}
 
 .producto__nombre {
 
@@ -264,8 +262,6 @@ h3 {
         
 }
 
-
-
 @media (min-width:768px) {
     .nosotros{
 
@@ -289,3 +285,32 @@ h3 {
         /* Establece la posición de la columna de la cuadrícula de la imagen. de izquierda a derecha empieza en 2 y se va hasta el 3 por eso pusimos 2/3 */
     }
 }
+
+/** bloques **/
+
+.bloques{
+    display: grid; /*Hacemos que los bloques sean un grid*/
+    grid-template-columns: repeat(2, 1fr); /*Hacemos que los bloques sean de dos columnas*/
+    row-gap: 1rem; /*Hacemos que los bloques tengan un espacio de 1rem entre ellos*/
+    gap: 2rem; /*Hacemos que los bloques tengan un espacio de 2rem entre ellos*/
+}
+
+@media (min-width:768px) {
+
+    .bloques{
+        grid-template-columns: repeat(4, 1fr); /*Hacemos que los bloques sean de una columna*/
+    }
+}
+
+.bloque{
+    text-align: center; /*Centramos el texto de los bloques*/
+}
+
+.bloque__imagen{
+    width: 100%; /*Hacemos que la imagen ocupe el 100% del contenedor*/
+}
+
+.bloque__titulo{
+    margin: 0; /*Quitamos el margen del titulo*/
+}
+
