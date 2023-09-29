@@ -6,7 +6,7 @@
     /* Define una variable CSS llamada "--primario_oscuro" con un valor de color púrpura oscuro (#89119D). */
     --secundario: #FFCE00;
     /* Define una variable CSS llamada "--secundario" con un valor de color amarillo (#FFCE00). */
-    --secundario_oscuro: rgb(233, 287, 2);
+    --secundario_oscuro: #ffcc00c4;
     /* Define una variable CSS llamada "--secundario_oscuro" con un valor de color verde en formato RGB. */
     --blanco: #fff;
     /* Define una variable CSS llamada "--blanco" con un valor de color blanco (#fff). */
@@ -51,7 +51,7 @@ a {
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
     /* Limita el ancho de las imágenes al 100% del contenedor padre para que se ajusten automáticamente al tamaño de la pantalla. */
 }
 
@@ -179,10 +179,7 @@ h3 {
     /* Establece el color de fondo del producto utilizando la variable "--blanco". */
 }
 
-.producto__imagen {
-    width: 100%;
-    /* Establece el ancho de la imagen del producto al 100% del contenedor padre para que se ajuste automáticamente al tamaño de la pantalla. */
-}
+
 
 .producto__informacion {}
 
@@ -275,7 +272,6 @@ h3 {
 .nosotros__imagen {
     grid-row: 1/2;
     /* Establece la posición de la fila de la cuadrícula de la imagen.  de arriba a abajo empieza en 1 y se va hasta el 2 por eso pusimos 1/2 */
-    width: 100%;
     /* Establece el ancho de la imagen del producto al 100% del contenedor padre para que se ajuste automáticamente al tamaño de la pantalla. */
 }
 
@@ -306,11 +302,56 @@ h3 {
     text-align: center; /*Centramos el texto de los bloques*/
 }
 
-.bloque__imagen{
-    width: 100%; /*Hacemos que la imagen ocupe el 100% del contenedor*/
-}
+
 
 .bloque__titulo{
     margin: 0; /*Quitamos el margen del titulo*/
 }
 
+/** PAgina del producto **/
+
+@media (min-width:768px) { /*Si la pantalla es mayor a 768px*/
+    .camisa{
+        display: grid; /*Hacemos que los bloques sean un grid*/
+        grid-template-columns: repeat(2, 1fr); /*Hacemos que los bloques sean de dos columnas*/
+        gap: 3rem; /*Hacemos que los bloques tengan un espacio de 2rem entre ellos*/
+    }
+}
+
+
+.formulario{
+    display: grid; /*Hacemos que los bloques sean un grid*/
+    grid-template-columns: repeat(2, 1fr); /*creamos 2 columnas y 1 fila */
+    gap : 2rem; /*Hacemos que los bloques tengan un espacio de 2rem entre ellos*/
+}
+
+.formulario__campo{
+    border: .5rem solid var(--primario_oscuro); /*Establecemos un borde de 1rem de color var(--primario_oscuro)*/
+    background-color: transparent; /*Establecemos el color de fondo del campo del formulario*/
+    color: var(--blanco); /*Establecemos el color del texto del campo del formulario*/
+    font-size: 2rem; /*Establecemos el tamaño de la fuente del campo del formulario*/
+    font-family: Arial, Helvetica, sans-serif; /*Establecemos la fuente del campo del formulario*/
+    padding: 1rem; /*Establecemos el relleno del campo del formulario*/
+    justify-content: center; /*Centramos el contenido del campo del formulario*/
+
+}
+
+.formulario__submit{
+
+    background-color: var(--secundario); /*Establecemos el color de fondo del boton*/
+    border: none; /*Quitamos el borde del boton*/
+    font-size: 2rem; /*Establecemos el tamaño de la fuente del boton*/
+    font-family: var(--fuente_principal); /*Establecemos la fuente del boton*/
+    padding: 2rem; /*Establecemos el relleno del boton*/
+    transition: background-color .3s ease; /*Establecemos una transicion de 0.3s para que el cambio de color de fondo del boton sea mas suave*/
+    transition: font-size .2s ease; /*Establecemos una transicion de 0.3s para que el cambio de tamaño de la fuente del boton sea mas suave*/
+    grid-column: 1/3; /*Establecemos la posicion del boton en la cuadricula del 1 hasta el 3 en columnas de manera horizontal*/
+    
+}
+
+
+.formulario__submit:hover{
+    cursor: pointer; /*Cambiamos el cursor del boton a pointer*/
+    background-color: var(--secundario_oscuro); /*Establecemos el color de fondo del boton cuando el cursor pasa por encima*/
+    font-size: 2.4rem; /*Establecemos el tamaño de la fuente del boton cuando el cursor pasa por encima*/   
+}
